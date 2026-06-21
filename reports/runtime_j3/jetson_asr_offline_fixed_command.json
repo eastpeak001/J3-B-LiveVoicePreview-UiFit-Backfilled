@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-06-21T16:18:26",
+  "status": "PASS",
+  "input_wav": "/home/pinggu_auar/asr_test_wavs/test_unknown_usb.wav",
+  "model_path": "/home/pinggu_auar/StereoCameraValidation_Jetson/J3A_commandtune_test/StereoCameraValidation_Jetson_J3_A_CommandTune_Package/models/asr/vosk-model-small-cn-0.22",
+  "source_audio": {
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "sample_rate": 16000,
+    "frame_count": 64000,
+    "duration_seconds": 4.0,
+    "compression": "NONE",
+    "is_16k_mono_s16le": true
+  },
+  "recognition_audio": {
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "sample_rate": 16000,
+    "frame_count": 64000,
+    "duration_seconds": 4.0,
+    "compression": "NONE",
+    "is_16k_mono_s16le": true
+  },
+  "resample_method": "not_required",
+  "recognition_mode": "open",
+  "recognized_text": "今天 天气 不错",
+  "command_id": null,
+  "phrase": null,
+  "unknown": true,
+  "audio_duration_seconds": 4.0,
+  "processing_time_ms": 3130.556712003454
+}

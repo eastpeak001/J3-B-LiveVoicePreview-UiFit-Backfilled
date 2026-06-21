@@ -1,0 +1,419 @@
+Generated: 2026-06-21T11:37:26.047785+08:00
+
+platform: Linux-5.15.148-tegra-aarch64-with-glibc2.35
+
+===== /etc/os-release =====
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+
+===== /etc/nv_tegra_release =====
+# R36 (release), REVISION: 4.3, GCID: 38968081, BOARD: generic, EABI: aarch64, DATE: Wed Jan  8 01:49:37 UTC 2025
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+
+===== Python environment =====
+Python: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Executable: /usr/bin/python3
+NumPy: 1.21.5
+OpenCV: 4.5.4
+cv2.ximgproc: True
+cv2.cuda: True
+cv2.cuda device count: 0
+
+===== User groups =====
+user=pinggu_auar groups=['adm', 'audio', 'cdrom', 'dip', 'gdm', 'gpio', 'i2c', 'lpadmin', 'pinggu_auar', 'plugdev', 'render', 'sambashare', 'sudo', 'video', 'weston-launch'] video_member=True
+
+===== Temperatures =====
+/sys/class/thermal/thermal_zone0/temp: 49500
+/sys/class/thermal/thermal_zone1/temp: 50125
+/sys/class/thermal/thermal_zone2/temp: <read failed: TypeError: can't concat NoneType to bytes>
+/sys/class/thermal/thermal_zone3/temp: <read failed: TypeError: can't concat NoneType to bytes>
+/sys/class/thermal/thermal_zone4/temp: <read failed: TypeError: can't concat NoneType to bytes>
+/sys/class/thermal/thermal_zone5/temp: 49843
+/sys/class/thermal/thermal_zone6/temp: 50718
+/sys/class/thermal/thermal_zone7/temp: 48875
+/sys/class/thermal/thermal_zone8/temp: 50750
+
+===== Thermal types =====
+/sys/class/thermal/thermal_zone0/type: cpu-thermal
+/sys/class/thermal/thermal_zone1/type: gpu-thermal
+/sys/class/thermal/thermal_zone2/type: cv0-thermal
+/sys/class/thermal/thermal_zone3/type: cv1-thermal
+/sys/class/thermal/thermal_zone4/type: cv2-thermal
+/sys/class/thermal/thermal_zone5/type: soc0-thermal
+/sys/class/thermal/thermal_zone6/type: soc1-thermal
+/sys/class/thermal/thermal_zone7/type: soc2-thermal
+/sys/class/thermal/thermal_zone8/type: tj-thermal
+
+===== Fan state =====
+/sys/class/hwmon/hwmon0/pwm1: 69
+
+===== uname =====
+$ uname -a
+exit=0
+Linux ubuntu 5.15.148-tegra #1 SMP PREEMPT Tue Jan 7 17:14:38 PST 2025 aarch64 aarch64 aarch64 GNU/Linux
+
+===== pip =====
+$ /usr/bin/python3 -m pip --version
+exit=1
+/usr/bin/python3: No module named pip
+
+===== JetPack packages =====
+$ dpkg-query -W -f=${binary:Package}	${Version}
+ nvidia-jetpack nvidia-l4t-core
+exit=1
+nvidia-l4t-core	36.4.3-20250107174145
+
+dpkg-query: 没有找到与 nvidia-jetpack 相匹配的软件包
+
+===== nvcc =====
+$ nvcc --version
+ERROR: FileNotFoundError: [Errno 2] No such file or directory: 'nvcc'
+
+===== tegrastats path =====
+$ sh -c command -v tegrastats || true
+exit=0
+/usr/bin/tegrastats
+
+===== nvpmodel verbose =====
+$ sudo -n nvpmodel -q --verbose
+exit=0
+NVPM VERB: Config file: /etc/nvpmodel.conf
+NVPM VERB: parsing done for /etc/nvpmodel.conf
+NVPM VERB: Current mode: NV Power Mode: 25W
+1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_0: PATH /sys/devices/system/cpu/cpu0/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_1: PATH /sys/devices/system/cpu/cpu1/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_2: PATH /sys/devices/system/cpu/cpu2/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_3: PATH /sys/devices/system/cpu/cpu3/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_4: PATH /sys/devices/system/cpu/cpu4/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_5: PATH /sys/devices/system/cpu/cpu5/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM FBP_POWER_GATING: ARG FBP_PG_MASK: PATH /sys/devices/platform/gpu.0/fbp_pg_mask: REAL_VAL: 2 CONF_VAL: 2
+NVPM VERB: PARAM TPC_POWER_GATING: ARG TPC_PG_MASK: PATH /sys/devices/platform/gpu.0/tpc_pg_mask: REAL_VAL: 240 CONF_VAL: 240
+NVPM VERB: PARAM GPU_POWER_CONTROL_ENABLE: ARG GPU_PWR_CNTL_EN: PATH /sys/devices/platform/gpu.0/power/control: REAL_VAL: auto CONF_VAL: on
+NVPM VERB: PARAM CPU_A78_0: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_0: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM CPU_A78_1: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_1: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM CPU_A78_2: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_2: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM CPU_A78_3: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_3: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM CPU_A78_4: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_4: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM CPU_A78_5: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq: REAL_VAL: 729600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_5: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq: REAL_VAL: 1344000 CONF_VAL: 1344000
+NVPM VERB: PARAM GPU: ARG MIN_FREQ: PATH /sys/devices/platform/17000000.gpu/devfreq_dev/min_freq: REAL_VAL: 306000000 CONF_VAL: 0
+NVPM VERB: PARAM GPU: ARG MAX_FREQ: PATH /sys/devices/platform/17000000.gpu/devfreq_dev/max_freq: REAL_VAL: 918000000 CONF_VAL: 918000000
+NVPM VERB: PARAM GPU_POWER_CONTROL_DISABLE: ARG GPU_PWR_CNTL_DIS: PATH /sys/devices/platform/gpu.0/power/control: REAL_VAL: auto CONF_VAL: auto
+NVPM VERB: PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_clk_cap/emc: REAL_VAL: 3199000000 CONF_VAL: 3199000000
+
+===== jetson_clocks =====
+$ sudo -n jetson_clocks --show
+exit=0
+SOC family:tegra234  Machine:NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
+Online CPUs: 0-5
+cpu0:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=729600 IdleStates: WFI=1 c7=1 
+cpu1:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=729600 IdleStates: WFI=1 c7=1 
+cpu2:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=1190400 IdleStates: WFI=1 c7=1 
+cpu3:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=729600 IdleStates: WFI=1 c7=1 
+cpu4:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=1190400 IdleStates: WFI=1 c7=1 
+cpu5:  Online=1 Governor=schedutil MinFreq=729600 MaxFreq=1344000 CurrentFreq=1190400 IdleStates: WFI=1 c7=1 
+GPU MinFreq=306000000 MaxFreq=918000000 CurrentFreq=306000000
+Active GPU TPCs: 4
+EMC MinFreq=204000000 MaxFreq=3199000000 CurrentFreq=2133000000 FreqOverride=0
+FAN Dynamic Speed Control=nvfancontrol hwmon0_pwm1=69
+NV Power Mode: 25W
+
+===== lsusb =====
+$ lsusb
+exit=0
+Bus 002 Device 002: ID 0bda:0489 Realtek Semiconductor Corp. 4-Port USB 3.0 Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 13d3:3549 IMC Networks Bluetooth Radio
+Bus 001 Device 008: ID 0483:5750 STMicroelectronics LED badge -- mini LED display -- 11x44
+Bus 001 Device 005: ID 258a:010c BY Tech Gaming Keyboard
+Bus 001 Device 004: ID 1bcf:2d4f Sunplus Innovation Technology Inc. USB2.0 Camera RGB
+Bus 001 Device 010: ID 0b05:1a72 ASUSTek Computer, Inc. ROG GIII WIRELESS AIMPOINT
+Bus 001 Device 002: ID 0bda:5489 Realtek Semiconductor Corp. 4-Port USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+===== video nodes =====
+$ sh -c ls -l /dev/video* 2>&1 || true
+exit=0
+crw-rw----+ 1 root video 81, 0 11月 22  2023 /dev/video0
+crw-rw----+ 1 root video 81, 1 11月 22  2023 /dev/video1
+
+===== v4l2-ctl path =====
+$ sh -c command -v v4l2-ctl || true
+exit=0
+/usr/bin/v4l2-ctl
+
+===== GStreamer =====
+$ gst-launch-1.0 --version
+exit=0
+gst-launch-1.0 version 1.20.3
+GStreamer 1.20.3
+https://launchpad.net/distros/ubuntu/+source/gstreamer1.0
+
+===== GStreamer v4l2src =====
+$ gst-inspect-1.0 v4l2src
+exit=0
+Factory Details:
+  Rank                     primary (256)
+  Long-name                Video (video4linux2) Source
+  Klass                    Source/Video
+  Description              Reads frames from a Video4Linux2 device
+  Author                   Edgard Lima <edgard.lima@gmail.com>, Stefan Kost <ensonic@users.sf.net>
+
+Plugin Details:
+  Name                     video4linux2
+  Description              elements for Video 4 Linux
+  Filename                 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstvideo4linux2.so
+  Version                  1.20.3
+  License                  LGPL
+  Source module            gst-plugins-good
+  Source release date      2022-06-15
+  Binary package           GStreamer Good Plugins (Ubuntu)
+  Origin URL               https://launchpad.net/distros/ubuntu/+source/gst-plugins-good1.0
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseSrc
+                         +----GstPushSrc
+                               +----GstV4l2Src
+
+实现的接口:
+  GstURIHandler
+  GstTuner
+  GstColorBalance
+  GstVideoOrientation
+
+Pad Templates:
+  SRC template: 'src'
+    Availability: Always
+    Capabilities:
+      image/jpeg
+      video/mpeg
+            mpegversion: 4
+           systemstream: false
+      video/mpeg
+            mpegversion: { (int)1, (int)2 }
+      video/mpegts
+           systemstream: true
+      video/x-bayer
+                 format: { (string)bggr, (string)gbrg, (string)grbg, (string)rggb }
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+      video/x-dv
+           systemstream: true
+      video/x-fwht
+      video/x-h263
+                variant: itu
+      video/x-h264
+          stream-format: { (string)byte-stream, (string)avc }
+              alignment: au
+      video/x-h265
+          stream-format: byte-stream
+              alignment: au
+      video/x-pwc1
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+      video/x-pwc2
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+      video/x-raw
+                 format: { (string)RGB16, (string)BGR, (string)RGB, (string)ABGR, (string)xBGR, (string)RGBA, (string)RGBx, (string)GRAY8, (string)GRAY16_LE, (string)GRAY16_BE, (string)YVU9, (string)YV12, (string)YUY2, (string)YVYU, (string)UYVY, (string)Y42B, (string)Y41B, (string)YUV9, (string)NV12_64Z32, (string)NV24, (string)NV61, (string)NV16, (string)NV21, (string)NV12, (string)I420, (string)ARGB, (string)xRGB, (string)BGRA, (string)BGRx, (string)BGR15, (string)RGB15 }
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+      video/x-sonix
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+      video/x-vp8
+      video/x-vp9
+      video/x-wmv
+             wmvversion: 3
+                 format: WVC1
+      video/x-raw(format:Interlaced)
+                 format: { (string)RGB16, (string)BGR, (string)RGB, (string)ABGR, (string)xBGR, (string)RGBA, (string)RGBx, (string)GRAY8, (string)GRAY16_LE, (string)GRAY16_BE, (string)YVU9, (string)YV12, (string)YUY2, (string)YVYU, (string)UYVY, (string)Y42B, (string)Y41B, (string)YUV9, (string)NV12_64Z32, (string)NV24, (string)NV61, (string)NV16, (string)NV21, (string)NV12, (string)I420, (string)ARGB, (string)xRGB, (string)BGRA, (string)BGRx, (string)BGR15, (string)RGB15 }
+                  width: [ 1, 32768 ]
+                 height: [ 1, 32768 ]
+              framerate: [ 0/1, 2147483647/1 ]
+         interlace-mode: alternate
+
+Element has no clocking capabilities.
+
+URI handling capabilities:
+  Element can act as source.
+  Supported URI protocols:
+    v4l2
+
+Pads:
+  SRC: 'src'
+    Pad Template: 'src'
+
+Element Properties:
+  blocksize           : Size in bytes to read per buffer (-1 = default)
+                        flags: 可读, 可写
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 4096 
+  brightness          : Picture brightness, or more precisely, the black level
+                        flags: 可读, 可写, 可控制
+                        Integer. Range: -2147483648 - 2147483647 Default: 0 
+  contrast            : Picture contrast or luma gain
+                        flags: 可读, 可写, 可控制
+                        Integer. Range: -2147483648 - 2147483647 Default: 0 
+  device              : Device location
+                        flags: 可读, 可写
+                        String. Default: "/dev/video0"
+  device-fd           : File descriptor of the device
+                        flags: 可读
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  device-name         : Name of the device
+                        flags: 可读
+                        String. Default: null
+  do-timestamp        : Apply current stream time to buffers
+                        flags: 可读, 可写
+                        Boolean. Default: false
+  extra-controls      : Extra v4l2 controls (CIDs) for the device
+                        flags: 可读, 可写
+                        Boxed pointer of type "GstStructure"
+  flags               : Device type flags
+                        flags: 可读
+                        Flags "GstV4l2DeviceTypeFlags" Default: 0x00000000, "(none)"
+                           (0x00000001): capture          - Device supports video capture
+                           (0x00000002): output           - Device supports video playback
+                           (0x00000004): overlay          - Device supports video overlay
+                           (0x00000010): vbi-capture      - Device supports the VBI capture
+                           (0x00000020): vbi-output       - Device supports the VBI output
+                           (0x00010000): tuner            - Device has a tuner or modulator
+                           (0x00020000): audio            - Device has audio inputs or outputs
+  force-aspect-ratio  : When enabled, the pixel aspect ratio will be enforced
+                        flags: 可读, 可写
+                        Boolean. Default: true
+  hue                 : Hue or color balance
+                        flags: 可读, 可写, 可控制
+                        Integer. Range: -2147483648 - 2147483647 Default: 0 
+  io-mode             : I/O mode
+                        flags: 可读, 可写
+                        Enum "GstV4l2IOMode" Default: 0, "auto"
+                           (0): auto             - GST_V4L2_IO_AUTO
+                           (1): rw               - GST_V4L2_IO_RW
+                           (2): mmap             - GST_V4L2_IO_MMAP
+                           (3): userptr          - GST_V4L2_IO_USERPTR
+                           (4): dmabuf           - GST_V4L2_IO_DMABUF
+                           (5): dmabuf-import    - GST_V4L2_IO_DMABUF_IMPORT
+  name                : The name of the object
+                        flags: 可读, 可写, 0x2000
+                        String. Default: "v4l2src0"
+  norm                : video standard
+                        flags: 可读, 可写
+                        Enum "V4L2_TV_norms" Default: 0, "none"
+                           (0): none             - none
+                           (45056): NTSC             - NTSC
+                           (4096): NTSC-M           - NTSC-M
+                           (8192): NTSC-M-JP        - NTSC-M-JP
+                           (32768): NTSC-M-KR        - NTSC-M-KR
+                           (16384): NTSC-443         - NTSC-443
+                           (255): PAL              - PAL
+                           (7): PAL-BG           - PAL-BG
+                           (1): PAL-B            - PAL-B
+                           (2): PAL-B1           - PAL-B1
+                           (4): PAL-G            - PAL-G
+                           (8): PAL-H            - PAL-H
+                           (16): PAL-I            - PAL-I
+                           (224): PAL-DK           - PAL-DK
+                           (32): PAL-D            - PAL-D
+                           (64): PAL-D1           - PAL-D1
+                           (128): PAL-K            - PAL-K
+                           (256): PAL-M            - PAL-M
+                           (512): PAL-N            - PAL-N
+                           (1024): PAL-Nc           - PAL-Nc
+                           (2048): PAL-60           - PAL-60
+                           (16711680): SECAM            - SECAM
+                           (65536): SECAM-B          - SECAM-B
+                           (262144): SECAM-G          - SECAM-G
+                           (524288): SECAM-H          - SECAM-H
+                           (3276800): SECAM-DK         - SECAM-DK
+                           (131072): SECAM-D          - SECAM-D
+                           (1048576): SECAM-K          - SECAM-K
+                           (2097152): SECAM-K1         - SECAM-K1
+                           (4194304): SECAM-L          - SECAM-L
+                           (8388608): SECAM-Lc         - SECAM-Lc
+  num-buffers         : Number of buffers to output before sending EOS (-1 = unlimited)
+                        flags: 可读, 可写
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  parent              : The parent of the object
+                        flags: 可读, 可写, 0x2000
+                        Object of type "GstObject"
+  pixel-aspect-ratio  : Overwrite the pixel aspect ratio of the device
+                        flags: 可读, 可写
+                        String. Default: null
+  saturation          : Picture color saturation or chroma gain
+                        flags: 可读, 可写, 可控制
+                        Integer. Range: -2147483648 - 2147483647 Default: 0 
+  typefind            : Run typefind before negotiating (deprecated, non-functional)
+                        flags: 可读, 可写, 已废弃
+                        Boolean. Default: false
+
+Element Signals:
+  "prepare-format" :  void user_function (GstElement* object,
+                                          gint arg0,
+                                          GstCaps* arg1,
+                                          gpointer user_data);
+
+===== disk =====
+$ df -hT
+exit=0
+文件系统        类型   大小  已用  可用 已用% 挂载点
+/dev/nvme0n1p1  ext4   915G  8.4G  860G    1% /
+tmpfs           tmpfs  3.8G  120K  3.8G    1% /dev/shm
+tmpfs           tmpfs  1.5G   35M  1.5G    3% /run
+tmpfs           tmpfs  5.0M  4.0K  5.0M    1% /run/lock
+/dev/nvme0n1p10 vfat    63M  110K   63M    1% /boot/efi
+tmpfs           tmpfs  762M  204K  762M    1% /run/user/1000
+
+===== memory =====
+$ free -h
+exit=0
+total        used        free      shared  buff/cache   available
+内存：      7.4Gi       1.7Gi       2.4Gi        37Mi       3.4Gi       5.5Gi
+交换：      3.7Gi          0B       3.7Gi
+
+===== swap =====
+$ swapon --show
+exit=0
+NAME       TYPE      SIZE USED PRIO
+/dev/zram0 partition 635M   0B    5
+/dev/zram1 partition 635M   0B    5
+/dev/zram2 partition 635M   0B    5
+/dev/zram3 partition 635M   0B    5
+/dev/zram4 partition 635M   0B    5
+/dev/zram5 partition 635M   0B    5
+
+===== CUDA libraries =====
+$ sh -c ldconfig -p 2>/dev/null | grep -E 'libcuda|libcudart' || true
+exit=0
+libcuda.so.1 (libc6,AArch64) => /usr/lib/aarch64-linux-gnu/nvidia/libcuda.so.1
+	libcuda.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libcuda.so
+	libcuda.so (libc6,AArch64) => /usr/lib/aarch64-linux-gnu/nvidia/libcuda.so
+
+===== nvpmodel fallback =====
+NOT RUN: verbose query succeeded

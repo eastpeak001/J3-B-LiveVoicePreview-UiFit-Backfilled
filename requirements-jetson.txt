@@ -1,0 +1,5 @@
+# OpenCV must come from the JetPack/system environment and is intentionally not a pip dependency.
+numpy>=1.24,<2
+PyYAML>=6.0
+psutil>=5.9
+vosk==0.3.45

@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-06-21T11:41:33",
+  "user": "pinggu_auar",
+  "user_groups": [
+    "pinggu_auar",
+    "adm",
+    "cdrom",
+    "sudo",
+    "audio",
+    "dip",
+    "video",
+    "plugdev",
+    "render",
+    "i2c",
+    "lpadmin",
+    "gdm",
+    "sambashare",
+    "weston-launch",
+    "gpio"
+  ],
+  "user_in_audio_group": true,
+  "target_vid": "1bcf",
+  "target_pid": "2d4f",
+  "target_usb_devices": [
+    {
+      "vid": "1bcf",
+      "pid": "2d4f",
+      "usb_bus_path": "/sys/devices/platform/bus@0/3610000.usb/usb1/1-2/1-2.2",
+      "product": "USB2.0 Camera RGB"
+    }
+  ],
+  "alsa_capture_devices": [
+    {
+      "card": 0,
+      "card_id": "RGB",
+      "card_name": "USB2.0 Camera RGB",
+      "device": 0,
+      "device_id": "USB Audio",
+      "device_name": "USB Audio",
+      "usb": {
+        "vid": "1bcf",
+        "pid": "2d4f",
+        "usb_bus_path": "/sys/devices/platform/bus@0/3610000.usb/usb1/1-2/1-2.2",
+        "product": "USB2.0 Camera RGB"
+      },
+      "vid": "1bcf",
+      "pid": "2d4f",
+      "alsa_hw": "hw:CARD=RGB,DEV=0",
+      "alsa_plughw": "plughw:CARD=RGB,DEV=0",
+      "selected_sample_rate": 44100,
+      "selected_channels": 2,
+      "selected_format": "S16_LE"
+    }
+  ],
+  "target_candidate_count": 1,
+  "target_found": true,
+  "target": {
+    "card": 0,
+    "card_id": "RGB",
+    "card_name": "USB2.0 Camera RGB",
+    "device": 0,
+    "device_id": "USB Audio",
+    "device_name": "USB Audio",
+    "usb": {
+      "vid": "1bcf",
+      "pid": "2d4f",
+      "usb_bus_path": "/sys/devices/platform/bus@0/3610000.usb/usb1/1-2/1-2.2",
+      "product": "USB2.0 Camera RGB"
+    },
+    "vid": "1bcf",
+    "pid": "2d4f",
+    "alsa_hw": "hw:CARD=RGB,DEV=0",
+    "alsa_plughw": "plughw:CARD=RGB,DEV=0",
+    "selected_sample_rate": 44100,
+    "selected_channels": 2,
+    "selected_format": "S16_LE"
+  },
+  "capabilities": {
+    "formats": [
+      "S16_LE"
+    ],
+    "rates": [
+      8000,
+      48000
+    ],
+    "rate_min": 8000,
+    "rate_max": 48000,
+    "channels_min": 2,
+    "channels_max": 2
+  },
+  "arecord_available": true,
+  "pactl_available": true,
+  "pipewire_status": "active",
+  "pulseaudio_status": "active"
+}

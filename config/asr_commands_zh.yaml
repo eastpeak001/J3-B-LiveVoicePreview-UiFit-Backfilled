@@ -1,0 +1,51 @@
+profile: jetson_vosk_offline_fixed_commands_zh
+
+asr:
+  engine: vosk
+  model_path: models/asr/vosk-model-small-cn-0.22
+  sample_rate: 16000
+  chunk_frames: 4000
+  max_audio_duration_seconds: 120
+  grammar_enabled: false
+
+commands:
+  - command_id: start_depth
+    enabled: true
+    phrase: 开始测距
+    phrases: [开始测距, 启动测距, 打开测距]
+    keywords:
+      - [开始, 测距]
+      - [启动, 测距]
+      - [打开, 测距]
+  - command_id: stop_depth
+    enabled: true
+    phrase: 暂停测距
+    phrases: [暂停测距, 关闭测距, 停止测距]
+    keywords:
+      - [暂停, 测距]
+      - [关闭, 测距]
+      - [停止, 测距]
+  - command_id: save_frame
+    enabled: true
+    phrase: 保存画面
+    phrases: [保存画面, 保存图片, 拍照保存]
+    keywords:
+      - [保存, 画面]
+      - [保存, 图片]
+      - [拍照, 保存]
+  - command_id: show_depth
+    enabled: true
+    phrase: 显示深度
+    phrases: [显示深度, 查看深度, 打开深度]
+    keywords:
+      - [显示, 深度]
+      - [查看, 深度]
+      - [打开, 深度]
+  - command_id: exit_program
+    enabled: true
+    phrase: 退出程序
+    phrases: [退出程序, 结束程序, 关闭程序]
+    keywords:
+      - [退出, 程序]
+      - [结束, 程序]
+      - [关闭, 程序]

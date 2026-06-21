@@ -1,0 +1,22 @@
+[
+  {
+    "device": "/dev/video0",
+    "name": "USB2.0 Camera RGB: USB2.0 Camer",
+    "driver": "uvcvideo",
+    "bus_info": "usb-3610000.usb-2.2",
+    "vid": "1bcf",
+    "pid": "2d4f",
+    "capture_capable": true,
+    "supports_mjpg_2560x720_60": true
+  },
+  {
+    "device": "/dev/video1",
+    "name": "USB2.0 Camera RGB: USB2.0 Camer",
+    "driver": "uvcvideo",
+    "bus_info": "usb-3610000.usb-2.2",
+    "vid": "1bcf",
+    "pid": "2d4f",
+    "capture_capable": true,
+    "supports_mjpg_2560x720_60": false
+  }
+]

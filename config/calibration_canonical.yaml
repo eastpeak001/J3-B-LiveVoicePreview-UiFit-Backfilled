@@ -1,0 +1,258 @@
+schema_version: 1
+creation_time: '2026-06-19T09:03:16.257711+08:00'
+profile: canonical_physical_left_right
+camera_device: 1
+image_width: 1280
+image_height: 720
+raw_width: 2560
+raw_height: 720
+fourcc: MJPG
+requested_fps: 60.0
+pattern_size:
+- 13
+- 11
+square_size_mm: 15.0
+raw_half_physical_mapping:
+  RAW_HALF_A: physical_left
+  RAW_HALF_B: physical_right
+logical_left_source: calibration_data/right and RAW_HALF_A
+logical_right_source: calibration_data/left and RAW_HALF_B
+camera_model: opencv_standard_pinhole_5_parameter
+calibration_flags:
+  single_camera:
+  - none
+  stereo:
+  - CALIB_FIX_INTRINSIC
+  rectify:
+  - CALIB_ZERO_DISPARITY
+  - alpha=0.0
+left_camera_matrix:
+- - 1112.0630616594951
+  - 0.0
+  - 660.0428687833895
+- - 0.0
+  - 1116.6270888229549
+  - 358.8594707758865
+- - 0.0
+  - 0.0
+  - 1.0
+left_distortion:
+- -0.013743966319223914
+- -0.054766243579417694
+- -5.274266995102766e-05
+- 0.0006151684248690341
+- 0.11796516655236988
+right_camera_matrix:
+- - 1110.3826562638985
+  - 0.0
+  - 738.0563886618905
+- - 0.0
+  - 1114.7781225940728
+  - 357.15753964151367
+- - 0.0
+  - 0.0
+  - 1.0
+right_distortion:
+- -0.023470242985713728
+- -0.020942537242750296
+- -0.0006593510725180138
+- 0.0007898002453116368
+- 0.05563903298731762
+R:
+- - 0.999998369253274
+  - 0.0016827568119086138
+  - -0.0006556068217268023
+- - -0.0016815830841537967
+  - 0.9999969898989411
+  - 0.0017867488318432296
+- - 0.0006586115120519578
+  - -0.001785643460767154
+  - 0.9999981888525135
+T:
+- -60.33275121957095
+- -0.21750453239959483
+- -0.9177505850533949
+E:
+- - -0.0016865248482598903
+  - 0.9181362080773536
+  - -0.21586434868104007
+- - -0.8780132439276569
+  - -0.10927713373395011
+  - 60.333243631604425
+- - 0.3189587115760806
+  - -60.33220360465911
+  - -0.10794207021865426
+F:
+- - 1.775980122871412e-08
+  - -9.628834615869278e-06
+  - 0.005971551840456348
+- - 9.209385568237471e-06
+  - 1.1415111037355451e-06
+  - -0.7102338093244084
+- - -0.007031825396671556
+  - 0.7092670938307142
+  - 1.0
+R1:
+- - 0.9998801546653655
+  - 0.005260023259072478
+  - 0.014560510350904022
+- - -0.005273126852903124
+  - 0.9999857257056812
+  - 0.0008616948854215029
+- - -0.01455576997475433
+  - -0.0009383710334329451
+  - 0.9998936188516484
+R2:
+- - 0.9998778294841331
+  - 0.0036046418464678637
+  - 0.015209624034070054
+- - -0.0035909503950741404
+  - 0.9999931224808358
+  - -0.000927397589248666
+- - -0.015212862365747828
+  - 0.000872667283172688
+  - 0.9998838968952614
+P1:
+- - 1181.160762739132
+  - 0.0
+  - 678.6980361938477
+  - 0.0
+- - 0.0
+  - 1181.160762739132
+  - 357.5480842590332
+  - 0.0
+- - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+P2:
+- - 1181.160762739132
+  - 0.0
+  - 678.6980361938477
+  - -71271.38571061756
+- - 0.0
+  - 1181.160762739132
+  - 357.5480842590332
+  - 0.0
+- - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+Q:
+- - 1.0
+  - 0.0
+  - 0.0
+  - -678.6980361938477
+- - 0.0
+  - 1.0
+  - 0.0
+  - -357.5480842590332
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1181.160762739132
+- - 0.0
+  - 0.0
+  - 0.016572720608169268
+  - -0.0
+valid_roi_left:
+- 0
+- 0
+- 1280
+- 720
+valid_roi_right:
+- 0
+- 0
+- 1279
+- 720
+baseline_mm: 60.340123003525775
+left_rms: 0.27885561440699
+right_rms: 0.2804356050642953
+stereo_rms: 0.8935526600415328
+mean_vertical_error_px: 0.5219025362768765
+p95_vertical_error_px: 1.2634872436523437
+max_vertical_error_px: 2.6236114501953125
+input_pair_count: 52
+valid_pair_count: 51
+excluded_pairs:
+- pair_036
+included_pairs:
+- pair_001
+- pair_002
+- pair_003
+- pair_004
+- pair_005
+- pair_006
+- pair_007
+- pair_008
+- pair_009
+- pair_010
+- pair_011
+- pair_012
+- pair_013
+- pair_014
+- pair_015
+- pair_016
+- pair_017
+- pair_018
+- pair_019
+- pair_020
+- pair_021
+- pair_022
+- pair_023
+- pair_024
+- pair_025
+- pair_026
+- pair_027
+- pair_028
+- pair_029
+- pair_030
+- pair_031
+- pair_032
+- pair_033
+- pair_034
+- pair_035
+- pair_037
+- pair_038
+- pair_039
+- pair_040
+- pair_041
+- pair_042
+- pair_043
+- pair_044
+- pair_045
+- pair_046
+- pair_047
+- pair_048
+- pair_049
+- pair_050
+- pair_051
+- pair_052
+input_manifest_sha256: 37eb7c66ee87656c0f5dfafbeacf978bacabead0a5e18fd218495e81f4d88969
+median_rectified_checkerboard_disparity_px: 131.29525756835938
+positive_checkerboard_disparity_ratio: 1.0
+physical_checks:
+  positive_focal_lengths: true
+  principal_points_near_image: true
+  distortion_finite: true
+  distortion_max_abs: 0.11796516655236988
+  rotation_determinant: 1.0
+  rotation_orthogonality_error: 1.6353526540287504e-17
+  translation_finite_nonzero: true
+  baseline_mm: 60.340123003525775
+  translation_x_mm: -60.33275121957095
+  baseline_direction_consistent_with_logical_left_right: true
+  rectification_matrices_finite: true
+  left_principal_point:
+  - 660.0428687833895
+  - 358.8594707758865
+  right_principal_point:
+  - 738.0563886618905
+  - 357.15753964151367
+canonical_sign_checks:
+  T_x_negative: true
+  P2_0_3_negative: true
+  Q_3_2_positive: true
+  median_rectified_checkerboard_disparity_positive: true
+metrics_close_to_original: true
+candidate_valid: true

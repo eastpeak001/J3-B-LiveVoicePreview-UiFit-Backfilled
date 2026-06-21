@@ -1,0 +1,22 @@
+# Jetson Capture Smoke Test
+
+- Device: `/dev/video0`
+- Requested: MJPG 2560x720 at 60 FPS
+- Actual: `{'width': 2560, 'height': 720, 'fourcc': 'MJPG'}`
+- OpenCV reported FPS: 60.000
+- V4L2 reported FPS: 60.000
+- VideoCapture reopened after 5 FPS detection: no
+- V4L2 FPS checks after OpenCV open: 60.000
+- Duration: 60.015 s
+- Frames: 2222
+- Measured FPS: 37.024
+- Average FPS: 37.024
+- P95 frame interval: 27.352 ms
+- Read failures: 0
+- Repeated frames: 0
+- Intervals over 100 ms: 0
+- Process CPU: 97.2%
+- Process RSS: 158.27 MiB
+- Raw shape: 2560x720
+- Physical left shape: 1280x720 (raw left half; no swap)
+- Physical right shape: 1280x720 (raw right half; no swap)
